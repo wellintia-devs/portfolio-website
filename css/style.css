@@ -98,6 +98,7 @@ body {
     to { transform: rotate(360deg); } /* Rotate full circle to 360 degrees */
 }
 
+
 /* =========================== NAVIGATION BAR =========================== */
 /* Fixed navigation at top of page */
 nav {
@@ -376,7 +377,64 @@ nav.scrolled {
 /* Subtitle (Frontend - Backend - Mobile - UI/UX) */
 .hero-subtitle {
     font-size: 20px;
+    color: var(--medium-text);
+    margin-bottom: 16px;
+    font-weight: 500; 
+}
 
+/* Description Paragraph */
+.hero-description {
+    font-size: 18px;
+    color: var(--medium-text);
+    margin-bottom: 40px;
+    line-height: 1.8; /* Extra space between lines for better readability */
+}
+
+/* === STATUS BADGE === */
+/* Open to Internship Opportunities" badge*/
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #F0FFF4;
+    border: 1px solid #9AE6B4;
+    color: var(--success-green);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    animation: pulse 2s ease-in-out infinite; /* Gentle pulsing effect */
+}
+
+/* Blinking green dot before text */
+.status-badge::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--success-green);
+    border-radius: 50%;
+    animation: blink 2s ease-in-out infinite;
+}
+
+/* Pulse animation for badge */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02);}
+}
+
+/* Blinking animation for green dot */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; } /* Dims */
+}
+
+/* === BUTTONS === */
+/* Container for buttons */
+.hero-buttons {
+    display: flex;
+    gap: 16px; /* Space between buttons */
+    flex-wrap: wrap; /* Wraps on small screens */
 }
 
 
