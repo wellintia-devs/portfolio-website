@@ -664,8 +664,75 @@ section {
     font-weight: 500;
 }
 
+/* === PROJECTS SECTION === */
+/* Grid layout for project cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fut, minmax(320px, 1fr)); /* Responsive */
+    gap: 40px;
+}
 
+/* === PROJECT CARD === */
+.project-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden; /* Keeps image inside rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* opacity: 0; comment muna */
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Project card lifts and grows shadow on hover */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Project image area */
+.project-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Actual project image */
+.project-img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Image zooms slightly on card hover */
+.project-card:hover .project-img {
+    transform: scale(1.05);
+}
+
+/* Project detail section */
+.project-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 12px;
+}
+
+/* Project description */
+.project-description {
+    color: var(--medium-text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
 
 
 
