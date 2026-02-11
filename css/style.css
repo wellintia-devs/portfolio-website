@@ -1016,5 +1016,136 @@ section {
     background: var(--light-bg);
 }
 
+/* === FOOTER === */
+footer {
+    background: var(--dark-text);
+    color: white;
+    text-align: center;
+    padding: 40px 32px;
+    margin-top: 60px;
+}
 
+footer p {
+    font-size: 15px;
+}
 
+/* Gradient text in footer */
+.footer-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+/* === FADE IN ANIMATION === */
+/* Animation when scrolling */
+.fade-in {
+    opacity: 0;
+    transform: translatey(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === MOBILE RESPONSIVE STYLES === */
+/* Adjustment for tablets (max width: 768px)*/
+@media (max-width: 768px) {
+    /* Smaller hero title */
+    .hero-title {
+        font-size: 42px;
+    }
+
+    /* Smaller section titles */
+    .section-title {
+        font-size: 36px;
+    }
+
+    /* Stack hero content vertically */
+    .hero-container {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 40px;
+    }
+
+    /* Profile picture appears below text */
+    .hero-image {
+        order: -1; /* Moves image above text*/
+    }
+
+    /* Stack button vertically */
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%; /* Full width buttons */
+        justify-content: center;
+    }
+
+    /* Single column projects */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Single column skills */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stack contact buttons */
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    /* Smaller form padding on mobile */
+    .contact-form {
+        padding: 32px 24px;
+    }
+
+    /* Adjustments for phones (max-width: 480px) */
+    @media (max-width: 480px) {
+        /* Even smaller tiles */
+        .hero-title {
+            font-size: 32px;
+        }
+
+        .section-title {
+            font-size: 28px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+        }
+
+        /* Reduced section padding */
+        section {
+            padding: 60px 20px;
+        }
+
+        /* Small stats number for */
+        .stat-number {
+            font-size: 36px;
+        }
+
+        /* Small project title */
+        .project-title {
+            font-size: 20px;
+        }
+
+        /* Tighter form padding */
+        .contact-form {
+            padding: 24px 16px;
+        }
+
+        /* Smaller social icons */
+        .social-link {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    
+}
