@@ -108,3 +108,27 @@ entries.forEach(entry => {
 });
 }, observeroptions);
 
+// === OBSERVE DIFFERENT ELEMENTS ===
+// Tell the observer to watch these elements for animation
+
+// Watch all elements with 'fade-in' class
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Watch all section headers
+document.querySelectorAll('.section-header').forEach(el => observer.observe(el));
+
+// Watch all project cards
+document.querySelectorAll('.project-card').forEach(el => observer.observe(el));
+
+// Watch skill items with staggered delay for cool cascade effect
+document.querySelectorAll('.skill-item').forEach((el, index) => {
+    el.style.transitionDelay = '${index * 0.1}s';
+    observer.observe(el);
+});
+
+// Watch about text section
+document.querySelectorAll('.about-stats').forEach(el => observer.observe(el));
+
+// Watch about stats section
+document.querySelectorAll('.about-stats').forEach(el => observer.observe(el));
+
