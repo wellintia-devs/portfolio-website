@@ -87,7 +87,7 @@ body {
     width: 50px;
     height: 50px;
     border: 5px solid var(--border-color); /* Light gray border */
-    border-top: 5px solid var(--primary-color); /* Primary color for the spinning
+    border-top: 5px solid var(--primary-color); /* Primary color for the spinning */
     border-radius: 50%; /* Make it a circle */
     animation: spin 1s linear infinite; /* Spin animation continuously */
 }
@@ -110,7 +110,7 @@ nav {
     padding: 20px 0;
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05) /* Subtle shadow for depth */;
-    animation: slideDown 0.6 ease-out;
+    animation: slideDown 0.6s ease-out;
     transition: box-shadow 0.3s ease;
 }
 
@@ -668,7 +668,7 @@ section {
 /* Grid layout for project cards */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fut, minmax(320px, 1fr)); /* Responsive */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive */
     gap: 40px;
 }
 
@@ -800,13 +800,13 @@ section {
     background: white;
     padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-category:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgb(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Category title (Frontend, Backend, etc.) */
@@ -861,6 +861,28 @@ section {
     color: var(--medium-text);
 }
 
+/* === SKILL LEVEL DOTS === */
+/* Visual indicator of skill proficiency */
+.skill-dots {
+    display: flex;
+    gap: 6px;
+}
 
- 
+/* Individual dot */
+.skill-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border-color); /* Gray for unfilled */
+    transition: background 0.3s ease;
+}
+
+/* Filled dot = high proficiency */
+.skill-dot.filled {
+    background: var(--primary-color); /* Purple for filled */
+}
+
+
+
+
 
