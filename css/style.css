@@ -987,6 +987,34 @@ section {
     box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
 }
 
+/* === SOCIAL LINKS === */
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
 
- 
+/* Individual icon */
+.social-link {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%; /* Circular border */
+    color: var(var(--primary-color));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Social icon hover effects */
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+    color: var(--secondary-color);
+    background: var(--light-bg);
+}
+
+
 
