@@ -918,5 +918,75 @@ section {
     flex-wrap: wrap;
 }
 
+/* === CONTACT FORM === */
+.contact-form {
+    background: white;
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    text-align: left;
+}
 
+/* Form group (label & input) */
+.form-group {
+    margin-bottom: 28px;    
+}
+
+/* Form label */
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    font-size: 15px; 
+}
+
+/* Text input and text area */
+.form-group input,
+.form-group textarea {
+    width: 100;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Input focus state when clicked */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Removes default browser outline */
+    border-color: var(--primary-color); /* Purple border */
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) /* Subtle grow */
+}
+
+/* Text area */
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical; /* Only allows vertical resizing */
+}
+
+/* Form submit button */
+.form-submit {
+    width: 100%;
+    padding: 16px 32px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+}
+
+
+ 
 
