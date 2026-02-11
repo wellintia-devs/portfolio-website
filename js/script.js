@@ -165,5 +165,66 @@ window.addEventListener('scroll', () => {
         if (linkHref === current) {
             link.classList.add('active');
         }
+    });
 });
-});
+
+// === CONTACT FORM WITH EMAILJS ===
+// Handles contact form submission and sends email using EmailJS service
+
+// EMAILJS CREDENTIALS
+const EMAILJS_PUBLIC_KEY = "dvTwS8mDyP75f3at1"
+const EMAILJS_SERVICE_ID = "service_yz5fzzx"
+const EMAILJS_TEMPLATE_ID = "template_8qpltmc"
+
+if (typeof emailjs !== 'undefined') {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
+// Get contact form element
+const contactForm = document.getElementById('contactForm');
+
+// If form exists on page, adds submit handler
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        // Prevent default form submission
+        e.preventDefault();
+
+        // Get form data from input fields
+        const formData = {
+            from_name: document.getElementById('name').value, // Sender's name
+            from_email: document.getElementById('email').value, // Sender's email
+            message: document.getElementById('message').value // Message content
+        };
+
+        // === CHECKS IF EMAILJS IS CONFIGURED ===
+        if (EMAILJS_PUBLIC_KEY === 'dvTwS8mDyP75f3at1' ||
+            EMAILJS_SERVICE_ID === 'service_zk0yz9a' ||
+            EMAILJS_TEMPLATE_ID === 'template_m39jcyo') {
+            }             
+        });
+        // Reset the form
+        contactForm.requestFullscreen();
+        return;
+}
+
+// === SEND EMAIL VIA EMAILJS ===
+// Change button text to show that it's sending
+const submitButton = contactForm.querySelector('.form-submit');
+const originalButtonText = submitButton.textContent;
+submitButton.textContent = 'Sending...';
+submitButton.disabled = true; // To prevent mul tiple submissions
+
+// Send email using EmailJS
+emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
+.then(function(response) {
+    console.log('SUCCESS!', response.status, response.text);
+
+    alert('✅ Thank you for your message!\n\nI will get back to you as soon as possible.');
+
+    // Reset the form
+    contactForm.reset();
+
+    // Restore button
+    submitButton.textContent = originalButtonText;
+    submitButton.disabled = false;
+})
