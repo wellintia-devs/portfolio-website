@@ -294,8 +294,30 @@ nav.scrolled {
     }
 }
 
-/* == DARK
+/* =========================== DARK MODE (TOGGLE BUTTON) =========================== */
+/* Button that switches between light and dark themes */
 
+.dark-mode-toggle {
+    width: 40px;
+    height: 40px;
+
+    /* Button layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Button styling */
+    background: var(--light-bg); /* Uses theme background */
+    border: 2px solid var(--border-color);
+    border-radius: 50%; 
+    cursor: pointer; /* To show that it is clickable */
+
+    transition: all 0.3s ease;
+
+    padding: 0;
+    margin-left: auto;
+    margin-right: 20px;
+}
 
 /* =========================== HERO SECTION (HOME PAGE) =========================== */
 .hero {
