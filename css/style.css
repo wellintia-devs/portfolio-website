@@ -50,6 +50,21 @@ HOW TO CUSTOMIZE?
     --success-green: #48BB78; /* Green - for success/available status */
 }
 
+/* =========================== DARK MODE COLORS =========================== */
+/* Color variable specifically for dark mode */
+/* Override the light mode colors when dark mode is active */
+
+body.dark-mode {
+    --light-bg: #1A202C; /* Dark blue-gray for page background */
+    --card-bg: #2D3748; /* Slightly lighter for cards */
+
+    --dark-text: #F7FAFC; /* Almost white for main text */
+    --medium-text: #CBD5E0; /* Light gray for secondary text */
+
+    /* Border color for dark backgrounds */
+    --border-color: #4A5568;
+}
+
 /* =========================== (BODY) GLOBAL STYLES =========================== */
 /* Applies to the entire website */
 
