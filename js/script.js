@@ -172,9 +172,9 @@ window.addEventListener('scroll', () => {
 // Handles contact form submission and sends email using EmailJS service
 
 // EMAILJS CREDENTIALS
-const EMAILJS_PUBLIC_KEY = "dvTwS8mDyP75f3at1"
-const EMAILJS_SERVICE_ID = "service_yz5fzzx"
-const EMAILJS_TEMPLATE_ID = "template_8qpltmc"
+const EMAILJS_PUBLIC_KEY = "OIOI"
+const EMAILJS_SERVICE_ID = "OIOI"
+const EMAILJS_TEMPLATE_ID = "OIOI"
 
 if (typeof emailjs !== 'undefined') {
     emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -195,16 +195,6 @@ if (contactForm) {
             from_email: document.getElementById('email').value, // Sender's email
             message: document.getElementById('message').value // Message content
         };
-
-        // === CHECKS IF EMAILJS IS CONFIGURED ===
-        if (EMAILJS_PUBLIC_KEY === 'dvTwS8mDyP75f3at1' ||
-            EMAILJS_SERVICE_ID === 'service_zk0yz9a' ||
-            EMAILJS_TEMPLATE_ID === 'template_m39jcyo')   {
-        
-        // Reset the form
-        contactForm.reset();
-        return;
-    }
 
 // === SEND EMAIL USING EMAILJS ===
 const submitButton = contactForm.querySelector('.form-submit');
@@ -227,7 +217,7 @@ emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
     submitButton.disabled = false;
 
 }, function(error) {
-    console.error('FAILIED...', error);
+    console.error('FAILED...', error);
 
     // Show error message to user
     alert('❌ Oops! Something went wrong.\n\n' +
@@ -239,14 +229,14 @@ emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formData)
         submitButton.disabled = false;        
         });
     });
-}
+}   
 
-// === UTILITY FUNCTIONS (OPTIONAL) ===
+// === UTILITY FUNCTIONS ===
 // Function to check if element is in viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
-        rect.top = 0 &&
+        rect.top >= 0 &&
         rect.left >= 0 &&
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
@@ -266,5 +256,26 @@ function getScrollPosition() {
     return window.pageYOffset || document.documentElement.scrollTop;
 }
 
-
+// ADDITIONAL FEATURES ===
+// Adds a back to top button that appears when scrolling down
+// Create button element
+const backToTopButton = document.createElement('button');
+backToTopButton.textContent = '↑';
+backToTopButton.className = 'back-to-top';
+backToTopButton.style.cssText = `
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    z-index: 99;
+`;
+document.body.appendChild(backToTopButton);
 
