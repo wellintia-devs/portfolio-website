@@ -260,6 +260,17 @@ nav.scrolled {
 /* =========================== MOBILE RESPONSIVE NAVIGATION =========================== */
 /* These styles applies on screens 768px or smaller (tablets and phones) */
 @media (max-width: 768px) {
+    .dark-mode-toggle {
+        margin-right: 16px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .dark-mode-toggle svg {
+        width: 18px;
+        height: 18px;
+    }
+
     /* Show hamburger menu on mobile phone */
     .menu-toggle {
         display: flex;

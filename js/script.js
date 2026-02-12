@@ -1,4 +1,4 @@
-/* === PORTFOLIO JAVASCRIPT - script.js
+/* ================== PORTFOLIO JAVASCRIPT - script.js =====================
 Created for: My portfolio Website
 
 This file contains ALL interactive functionality in the portfolio.
@@ -10,8 +10,8 @@ It handles:
 - Contact form (with EmailJS email sending)
 === */
 
-/* === PAGE LOADING === */
-/* Removes the loading screen once the page has been fully loaded */
+// ================== PAGE LOADING =====================
+// Removes the loading screen once the page has been fully loaded
 
 // Wait for page to load (including images)
 window.addEventListener('load', () => {
@@ -22,9 +22,8 @@ window.addEventListener('load', () => {
     }, 500);
 });
 
-
-/* === MOBILE MENU TOGGLE === */
-/* Makes the hamburger menu work on mobile device */
+// ================== MOBILE MENU TOGGLE =====================
+// Makes the hamburger menu work on mobile device
 
 // Get hamburger button element
 const menuToggle = document.getElementById('menuToggle');
@@ -39,8 +38,8 @@ menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-/* === CLOSE MOBILE MENU WHEN LINK CLICKED === */
-/* Automatically closes mobile menu when user clicks a navigation link */
+// ================== CLOSE MOBILE MENU WHEN LINK CLICKED =====================
+// Automatically closes mobile menu when user clicks a navigation link
 
 // Select all navigation links
 document.querySelectorAll('.nav-links a').forEach(link => {
@@ -53,8 +52,8 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-/* === SMOOTH SCROLLING === */
-/* Makes clicking navigation links scroll smoothly to sections instead of jumping */
+// ================== SMOOTH SCROLLING =====================
+// Makes clicking navigation links scroll smoothly to sections instead of jumping */
 
 // Select all links that start with # (internal page links)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -77,8 +76,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-/* === NAVBAR SCROLL EFFECT === */
-/* Adds shadow to navbar when user scrolls down */
+// ================== NAVBAR SCROLL EFFECT =====================
+// Adds shadow to navbar when user scrolls down */
 
 window.addEventListener('scroll', () => {
     // Get navbar element
@@ -92,7 +91,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// === SCROLL ANIMATION ===
+// ================== SCROLL ANIMATION SCROLL EFFECT =====================
 // Makes sections fade in and slide up when they appear on screen
 
 const observerOptions = {
@@ -109,7 +108,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// === OBSERVE DIFFERENT ELEMENTS ===
+// ================== OBSERVE DIFFERENT ELEMENTS =====================
 // Tell the observer to watch these elements for animation
 
 // Watch all elements with 'fade-in' class
@@ -133,7 +132,7 @@ document.querySelectorAll('.about-text').forEach(el => observer.observe(el));
 // Watch about stats section
 document.querySelectorAll('.about-stats').forEach(el => observer.observe(el));
 
-// === ACTIVE NAVIGATION HIGHLIGHT ===
+// ================== ACTIVE NAVIGATION HIGHLIGHT =====================
 // Highlights the current section in the navigation menu as you scroll
 
 window.addEventListener('scroll', () => {
@@ -168,7 +167,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// === CONTACT FORM WITH EMAILJS ===
+// ================== CONTACT FORM WITH EMAILJS =====================
 // Handles contact form submission and sends email using EmailJS service
 
 // EMAILJS CREDENTIALS
@@ -240,7 +239,7 @@ if (contactForm) {
     });
 }
 
-// === UTILITY FUNCTIONS ===
+// ================== UTILITY FUNCTIONS =====================
 // Function to check if element is in viewport
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
@@ -265,7 +264,7 @@ function getScrollPosition() {
     return window.pageYOffset || document.documentElement.scrollTop;
 }
 
-// === ADDITIONAL FEATURES ===
+// ================== ADDITIONAL FEATURES =====================
 // Adds a back to top button that appears when scrolling down
 // Create button element
 const backToTopButton = document.createElement('button');
