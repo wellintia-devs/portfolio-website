@@ -257,7 +257,7 @@ nav.scrolled {
     transform: rotate(-45deg) translate(7px, -7px); /* Bottom line rotates */
 }
 
-/* ====== MOBILE RESPONSIVE NAVIGATION ====== */
+/* =========================== MOBILE RESPONSIVE NAVIGATION =========================== */
 /* These styles applies on screens 768px or smaller (tablets and phones) */
 @media (max-width: 768px) {
     /* Show hamburger menu on mobile phone */
@@ -294,7 +294,10 @@ nav.scrolled {
     }
 }
 
-/* === HERO SECTION (HOME PAGE) === */
+/* == DARK
+
+
+/* =========================== HERO SECTION (HOME PAGE) =========================== */
 .hero {
     min-height: 100vh; /* Full screen height */
     display: flex;
@@ -405,7 +408,7 @@ nav.scrolled {
     line-height: 1.8; /* Extra space between lines for better readability */
 }
 
-/* === STATUS BADGE === */
+/* =========================== STATUS BADGE =========================== */
 /* Open to Internship Opportunities" badge*/
 .status-badge {
     display: inline-flex;
@@ -444,7 +447,7 @@ nav.scrolled {
     50% { opacity: 0.5; } /* Dims */
 }
 
-/* === BUTTONS === */
+/* =========================== BUTTONS =========================== */
 /* Container for buttons */
 .hero-buttons {
     display: flex;
@@ -494,7 +497,7 @@ nav.scrolled {
     transform: translateY(-2px);
 }
 
-/* === PROFILE IMAGE === */
+/* =========================== PROFILE IMAGE/PICTURE =========================== */
 /* Container for profile picture */
 .hero-image {
     position: relative;
@@ -525,7 +528,7 @@ nav.scrolled {
     transform: translateY(-10px);
 }
 
-/* === SECTION STYLE === */
+/* =========================== SECTION STYLE =========================== */
 /* Base style for major sections */
 section {
     padding: 100px 32px;
@@ -533,7 +536,7 @@ section {
     margin: 0 auto; /* Centers section */
 }
 
-/* === SECTION HEADERS === */
+/* =========================== SECTION HEADERS =========================== */
 /* Consistent header style for all sections */
 .section-header {
     text-align: center;
@@ -576,7 +579,7 @@ section {
     margin: 0 auto; /*Centers description */
 }
 
-/* === ABOUT SECTION === */
+/* =========================== ABOUT SECTION =========================== */
 .about-content {
     display: grid;
     gap: 60px;
@@ -629,7 +632,7 @@ section {
     transform: translateY(-2px);
 }
 
-/* === STATS CARDS === */
+/* =========================== STATS CARDS =========================== */
 /* Container for statistics cards */
 .about-stats {
     display: grid;
@@ -679,7 +682,7 @@ section {
     font-weight: 500;
 }
 
-/* === PROJECTS SECTION === */
+/* =========================== PROJECTS SECTION =========================== */
 /* Grid layout for project cards */
 .projects-grid {
     display: grid;
@@ -687,7 +690,7 @@ section {
     gap: 40px;
 }
 
-/* === PROJECT CARD === */
+/* =========================== PROJECT CARD =========================== */
 .project-card {
     background: white;
     border-radius: 20px;
@@ -768,7 +771,7 @@ section {
     overflow: hidden;
 }
 
-/* === PROJECT TAGS === */
+/* =========================== PROJECT TAGS =========================== */
 /* Container for technology tag */
 
 .project-tags {
@@ -798,7 +801,7 @@ section {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-/* === PROJECT LINKS === */
+/* =========================== PROJECT LINKS =========================== */
 .project-links {
     display: flex;
     gap: 12px;
@@ -848,7 +851,7 @@ section {
     z-index: 2;
 }
 
-/* === SKILLS SECTION === */
+/* =========================== SKILLS SECTION =========================== */
 /* Grid for skill categories */
 .skills-grid {
     display: grid;
@@ -856,7 +859,7 @@ section {
     gap: 32px;
 }
 
-/* === SKILL CATEGORY CARD === */
+/* =========================== SKILL CATEGORY CARD =========================== */
 .skill-category {
     background: white;
     padding: 32px;
@@ -888,7 +891,7 @@ section {
     gap: 20px;
 }
 
-/* === INDIVIDUAL SKILL ITEM === */
+/* =========================== INDIVIDUAL SKILL ITEM =========================== */
 .skill-item {
     display: flex;
     justify-content: space-between;
@@ -920,7 +923,7 @@ section {
     color: var(--medium-text);
 }
 
-/* === SKILL LEVEL DOTS === */
+/* =========================== SKILL LEVEL DOTS =========================== */
 /* Visual indicator of skill proficiency */
 .skill-dots {
     display: flex;
@@ -941,7 +944,7 @@ section {
     background: var(--primary-color); /* Purple for filled */
 }
 
-/* === CONTACT SECTION === */
+/* =========================== CONTACT SECTION =========================== */
 .contact-content {
     max-width: 700px;
     margin: 0 auto;
@@ -977,76 +980,76 @@ section {
     flex-wrap: wrap;
 }
 
-/* === CONTACT FORM === */
-.contact-form {
-    background: white;
-    padding: 48px;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    margin-bottom: 50px;
-    text-align: left;
-}
+    /* =========================== CONTACT FORM =========================== */
+    .contact-form {
+        background: white;
+        padding: 48px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 50px;
+        text-align: left;
+    }
 
-/* Form group (label & input) */
-.form-group {
-    margin-bottom: 28px;    
-}
+    /* Form group (label & input) */
+    .form-group {
+        margin-bottom: 28px;    
+    }
 
-/* Form label */
-.form-group label {
-    display: block;
-    font-weight: 600;
-    color: var(--dark-text);
-    margin-bottom: 8px;
-    font-size: 15px; 
-}
+    /* Form label */
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        color: var(--dark-text);
+        margin-bottom: 8px;
+        font-size: 15px; 
+    }
 
-/* Text input and text area */
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 2px solid var(--border-color);
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
-}
+    /* Text input and text area */
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid var(--border-color);
+        border-radius: 8px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 15px;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+    }
 
-/* Input focus state when clicked */
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none; /* Removes default browser outline */
-    border-color: var(--primary-color); /* Purple border */
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* Subtle glow */
-}
+    /* Input focus state when clicked */
+    .form-group input:focus,
+    .form-group textarea:focus {
+        outline: none; /* Removes default browser outline */
+        border-color: var(--primary-color); /* Purple border */
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); /* Subtle glow */
+    }
 
-/* Text area */
-.form-group textarea {
-    min-height: 150px;
-    resize: vertical; /* Only allows vertical resizing */
-}
+    /* Text area */
+    .form-group textarea {
+        min-height: 150px;
+        resize: vertical; /* Only allows vertical resizing */
+    }
 
-/* Form submit button */
-.form-submit {
-    width: 100%;
-    padding: 16px 32px;
-    background: var(--primary-gradient);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* Form submit button */
+    .form-submit {
+        width: 100%;
+        padding: 16px 32px;
+        background: var(--primary-gradient);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.form-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
-}
+    .form-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 25px rgba(102, 126, 234, 0.4);
+    }
 
-/* === SOCIAL LINKS === */
+/* =========================== SOCIAL LINKS =========================== */
 .social-links {
     display: flex;
     gap: 20px;
@@ -1097,7 +1100,7 @@ footer p {
     font-weight: 600;
 }
 
-/* === FADE IN ANIMATION === */
+/* =========================== FADE IN ANIMATION =========================== */
 /* Animation when scrolling */
 .fade-in {
     opacity: 0;
@@ -1110,7 +1113,7 @@ footer p {
     transform: translateY(0);
 }
 
-/* === MOBILE RESPONSIVE STYLES === */
+/* =========================== MOBILE RESPONSIVE STYLES =========================== */
 /* Adjustment for tablets (max width: 768px)*/
 @media (max-width: 768px) {
     /* Smaller hero title */
@@ -1165,69 +1168,69 @@ footer p {
     }
 }
 
-    /* Adjustments for phones (max-width: 480px) */
-    @media (max-width: 480px) {
-        /* Even smaller tiles */
-        .hero-title {
-            font-size: 32px;
-        }
-
-        .section-title {
-            font-size: 28px;
-        }
-
-        .hero-subtitle {
-            font-size: 16px;
-        }
-
-        /* Reduced section padding */
-        section {
-            padding: 60px 20px;
-        }
-
-        /* Small stats number for font size */
-        .stat-number {
-            font-size: 36px;
-        }
-
-        /* Small project title */
-        .project-title {
-            font-size: 20px;
-        }
-
-        /* Tighter form padding */
-        .contact-form {
-            padding: 24px 16px;
-        }
-
-        /* Smaller social icons */
-        .social-link {
-            width: 45px;
-            height: 45px;
-        }
+/* Adjustments for phones (max-width: 480px) */
+@media (max-width: 480px) {
+    /* Even smaller tiles */
+    .hero-title {
+        font-size: 32px;
     }
 
-    /* === PRINT STYLES === */
-    /* Styles for when page is printed */
-    @media print {
-        /* Hide navigation and loading screen */
-        nav,
-        .loading,
-        .menu-toggle {
-            display: none;
-        }
-
-        /* Ensure white background */
-        body {
-            background: white;
-        }
-
-        /* Remove shadow when printing */
-        .project-card,
-        .skill-category,
-        .stat-card,
-        .contact-form {
-            box-shadow: none;
-            border: 1px solid var(--border-color);
-        }
+    .section-title {
+        font-size: 28px;
     }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    /* Reduced section padding */
+    section {
+        padding: 60px 20px;
+    }
+
+    /* Small stats number for font size */
+    .stat-number {
+        font-size: 36px;
+    }
+
+    /* Small project title */
+    .project-title {
+        font-size: 20px;
+    }
+
+    /* Tighter form padding */
+    .contact-form {
+        padding: 24px 16px;
+    }
+
+    /* Smaller social icons */
+    .social-link {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* =========================== PRINT STYLES =========================== */
+/* Styles for when page is printed */
+@media print {
+    /* Hide navigation and loading screen */
+    nav,
+    .loading,
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Ensure white background */
+    body {
+        background: white;
+    }
+
+    /* Remove shadow when printing */
+    .project-card,
+    .skill-category,
+    .stat-card,
+    .contact-form {
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+}
