@@ -784,6 +784,50 @@ body.dark-mode .stat-number {
     text-shadow: 0 0 20px rgba(102, 126, 234, 0.3);
 }
 
+/* =========================== DARK MODE: PROJECT IMAGE ENHANCEMENT =========================== */
+/* Dark overlay on project images */
+
+/* Target the project image container */
+body.dark-mode .project-card img {
+    position: relative; /* Allows overlay positioning */
+    filter: brightness(0.7) contrast(1.1); /* Dims image by 30%, increases contrast slightly */
+    transition: all 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Add a dark semi-transparent overlay using pseudo-element */
+body.dark-mode .project-card::before {
+    content: ""; /* Creates empty element */
+    position: absolute; /* Positions over the image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        180deg, 
+        rgba(26, 32, 44, 0.3) 0%,     /* Subtle dark overlay at top */
+        rgba(26, 32, 44, 0.5) 100%    /* Stronger at bottom */
+    ); /* Gradient overlay darkens the image */
+    border-radius: 12px 12px 0 0; /* Matches card border radius (only top corners) */
+    pointer-events: none; /* Allows clicking through the overlay */
+    z-index: 1; /* Places overlay above image */
+    transition: opacity 0.3s ease; /* Smooth fade transition */
+}
+
+/* On hover, lighten the image and reduce overlay */
+body.dark-mode .project-card:hover img {
+    filter: brightness(0.85) contrast(1.15); /* Brightens to 85% on hover */
+}
+
+body.dark-mode .project-card:hover::before {
+    opacity: 0.5; /* Reduces overlay intensity on hover */
+}
+
+/* Make sure text stays above the overlay */
+body.dark-mode .project-card > * {
+    position: relative;
+    z-index: 2; /* Text and buttons stay on top */
+}
+
 /* =========================== STATS CARDS =========================== */
 /* Container for statistics cards */
 .about-stats {
@@ -812,6 +856,23 @@ body.dark-mode .stat-number {
 
 /* =========================== DARK MODE: BUTTONS =========================== */
 
+body.dark-mode .btn-primary {
+    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 100%);
+    color: white;
+    box-shadow:
+        0 4px 15px rgba(124, 58, 237, 0.4),
+        0 0 30px rgba(124, 58, 237, 0.3);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+}
+
+body.dark-mode .btn-secondary {
+    background: rgba(124, 58, 237, 0.1);
+    border: 2px solid #8B5CF6;
+    color: #C4B5FD;
+    box-shadow:inset0 2px 10px rgba(139, 92, 246, 0.3),
+    inset 0 0 20px rgba(124, 58, 237, 0.1);
+}
+
 body.dark-mode .btn-primary:hover {
     box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5); /* Brighter glow in dark mode */
 }
@@ -836,6 +897,18 @@ body.dark-mode .form-submit {
 
 body.dark-mode .form-submit:hover {
     box-shadow: 0 8px 35px rgba(102, 126, 234, 0.6);
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow:
+        0 4px 20px rgba(124, 58, 237, 0.4),
+        0 0 40px rgba(124, 58, 237, 0.3);
+    }
+    50% {
+        box-shadow:inset0 4px 25px rgba(124, 58, 237, 0.5),
+        0 0 50px rgba(124, 58, 237, 0.4);
+    }
 }
 
 /* Stat card lifts on hover */
@@ -900,8 +973,8 @@ body.dark-mode .form-submit:hover {
 
 body.dark-mode .project-card {
     background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0,);
+    border: 1px solid rgba(102, 126, 234, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Enhanced hover effect for dark mode */
@@ -919,9 +992,10 @@ body.dark-mode .project-tech {
 }
 
 body.dark-mode .project-links a {
-    background: rgba(102, 126, 234, 0.1); /* Subtle background */
-    color: var(--primary-color); /* Keep primary color */
-    border: 1px solid var(--primary-color);
+    background: rgba(102, 126, 234, 0.15); /* Subtle background */
+    color: #A5B4FC; /* Keep primary color */
+    border: 1px solid rgba(102, 126, 234, 0.4);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
 }
 
 body.dark-mode .project-links a:hover {
