@@ -745,6 +745,34 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* =========================== DARK MODE: BUTTONS =========================== */
+
+body.dark-mode .btn-primary:hover {
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5); /* Brighter glow in dark mode */
+}
+
+/* Secondary button dark mode adjustments */
+body.dark-mode .btn-secondary {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color); 
+}
+
+body.dark-mode .btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5); /* Purple glow */
+}
+
+/* Form submit button - enhanced glow */
+body.dark-mode .form-submit {
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+body.dark-mode .form-submit:hover {
+    box-shadow: 0 8px 35px rgba(102, 126, 234, 0.6);
+}
+
 /* Stat card lifts on hover */
 .stat-card:hover {
     transform: translateY(-8px);
