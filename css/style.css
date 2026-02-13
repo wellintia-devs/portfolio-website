@@ -1040,6 +1040,15 @@ body.dark-mode .project-links a:hover {
     gap: 20px;
 }
 
+/* =========================== DARK MODE: SKILLS SECTION =========================== */
+/* Skill category containers */
+
+body.dark-mode .skill-category {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* =========================== INDIVIDUAL SKILL ITEM =========================== */
 .skill-item {
     display: flex;
@@ -1062,6 +1071,10 @@ body.dark-mode .project-links a:hover {
     gap: 4px;
 }
 
+.skill-item:hover {
+    transform: translateX(8px);
+}
+
 .skill-name {
     font-weight: 600;
     color: var(--dark-text);
@@ -1070,6 +1083,12 @@ body.dark-mode .project-links a:hover {
 .skill-level {
     font-size: 13px;
     color: var(--medium-text);
+}
+
+/* =========================== DARK MODE: INDIVIDUAL SKILL ITEM =========================== */
+body.dark-mode .skill-item:hover {
+    border-color: var(--primary-color);
+    transform: translateX(8px);
 }
 
 /* =========================== SKILL LEVEL DOTS =========================== */
@@ -1091,6 +1110,18 @@ body.dark-mode .project-links a:hover {
 /* Filled dot = high proficiency */
 .skill-dot.filled {
     background: var(--primary-color); /* Purple for filled */
+}
+
+/* =========================== DARK MODE: SKILL DOT =========================== */
+body.dark-mode .skills-dot {
+    background: rgba(102, 126, 234, 0.3);
+    border: 1px solid rgba(102, 126, 234, 0.5); /* Subtle border */        
+}
+
+body.dark-mode .skill-dot.filled {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.6);
 }
 
 /* =========================== CONTACT SECTION =========================== */
