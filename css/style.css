@@ -1688,7 +1688,7 @@ body.dark-mode::-webkit-scrollbar-thumb {
     border-radius: 6px;
 }
 
-body.dark-mode::-webkit-slider-thumb:hover {
+body.dark-mode::-webkit-scrollbar-thumb:hover {
     background: var(--primary-color);
 }
 
